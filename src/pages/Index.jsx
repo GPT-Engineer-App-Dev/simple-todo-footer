@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton, Box } from "@chakra-ui/react";
+import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton, Box, Flex } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
 
 const Index = () => {
@@ -52,8 +52,17 @@ const Index = () => {
           ))}
         </VStack>
       </VStack>
+      <Footer />
     </Container>
   );
 };
+
+const Footer = () => (
+  <Box as="footer" width="100%" py={4} bg="gray.200" mt={10}>
+    <Text textAlign="center" fontSize="sm" color="gray.600">
+      © 2023 Todo App. All rights reserved.
+    </Text>
+  </Box>
+);
 
 export default Index;
